@@ -148,7 +148,7 @@ class WC_Serveloja_Funcoes {
             for ($i = 0; $i < count($posicao); $i++) {
                 $pos = $posicao[$i];
                 $wpdb->insert(
-                    $wpdb->prefix . "cartoes",
+                    $wpdb->prefix . "serveloja_cartoes",
                     array('car_cod' => $car_cod[$pos],
                         'car_bandeira' => $car_bandeira[$pos],
                         'car_parcelas' => $car_parcelas[$pos]
