@@ -1,0 +1,424 @@
+/*
+    Desenvolvido por TiServeloja, dezembro de 2017
+*/
+
+.tituloInput {
+    font-weight: bold;
+    font-size: 0.80rem;
+    margin: 20px 0px 0px 0px;
+    color: #666;
+}
+
+.inputFormConfigText{
+    font-size: 0.80rem;
+    margin: 20px 0px 5px 5px;
+    color: #808080; 
+    font-family: Nunito, sans-serif;
+}
+
+
+.inputFormConfigBox{
+    padding-left: 15px !important;
+    background-color: #E2E2E2 !important;
+    border: none !important;
+    margin: 0px;
+    padding: 7px 7px 7px 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    width: 60%;
+    height: 44px;
+    font-size: 14px;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.botaoCopia{
+    background-color: transparent;
+    background-image: url("../images/copy.png");
+    background-repeat: no-repeat;
+    background-size: 15px !important;
+    background-position: center;
+    border: none !important;
+    margin-top: 5px;
+    margin-left: -50px;
+    font-size: 14px;
+    border-radius: 3px;
+    width: 33px;
+    height: 33px;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    position: absolute !important;
+    cursor: pointer !important;
+
+}
+
+.input {
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #999 !important;
+    width: 60%;
+    -moz-box-shadow: inset 2px 2px 4px #ccc;
+    -webkit-box-shadow: inset 2px 2px 4px #ccc;
+    box-shadow: inset 2px 2px 4px #ccc;
+}
+
+.radios{
+    margin-top: 10px;
+    width: 60%;
+}
+
+.alertaToken{
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: default;
+    margin: 0px;
+    padding-left: 10px;
+    color: red; 
+    font-family: Nunito, sans-serif;
+}
+
+#mensagemCopia{
+    background-color: #c1d8aa;
+    border: 1px solid #017804;
+    border-radius: 3px;
+    float: right;
+    display: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: default;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #24B24B; 
+    font-family: Nunito, sans-serif;
+}
+
+.input_maior {
+    width: 100%;
+}
+
+.input_sborda {
+    border: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow:  none !important;
+    box-shadow:  none !important;
+    padding: 1px 5px 1px 5px !important;
+}
+
+.caixa_alta {
+    text-transform: uppercase;
+}
+
+.margin_top {
+    margin-top: 5px;
+}
+
+.textarea {
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    width: 50%;
+    height: 70px;
+    -moz-box-shadow: inset 2px 2px 4px #ccc;
+    -webkit-box-shadow: inset 2px 2px 4px #ccc;
+    box-shadow: inset 2px 2px 4px #ccc;
+    resize: none;
+}
+
+.select {
+    padding: 6px 7px 6px 7px !important;
+    font-size: .875rem;
+    font-family: Nunito, sans-serif;
+    border-radius: 3px;
+    border: 1px solid #999;
+    -moz-box-shadow: inset 2px 2px 4px #eee;
+    -webkit-box-shadow: inset 2px 2px 4px #eee;
+    box-shadow: inset 2px 2px 4px #eee;
+    width: 60%;
+    height: 35px !important;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.select_menor {
+    padding: 1px 3px 4px 4px !important;
+    font-size: .875rem;
+    font-family: Nunito, sans-serif;
+    border-radius: 3px;
+    border: 1px solid #999;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.select_menor_total_parcelas {
+    padding: 0px 0px 0px 0px !important;
+    font-size: .7rem !important;
+    font-family: Nunito, sans-serif !important;
+    border-radius: 3px !important;
+    border: 1px solid #999 !important;
+    width: 76px !important;
+    height: 20px !important;
+    margin: 0px 0px 5px 0px !important; 
+}
+
+.select_sborda {
+    border: none !important;
+    -moz-box-shadow: inset 2px 2px 4px #fff !important;
+    -webkit-box-shadow: inset 2px 2px 4px #fff !important;
+    box-shadow: inset 2px 2px 4px #fff !important;
+}
+/* 
+input[type="submit"] {
+    padding: 7px;
+    width: 120px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    background-color: #e6e6e6;
+    border: 1px solid #999;
+    box-shadow: none;
+    border-radius: 3px;
+	float: left;
+    margin-top: 25px;
+}
+
+button[type='reset'] {
+    padding: 7px 7px 8px 7px;
+    width: 120px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background-color: #224527;
+    box-shadow: none;
+    border-radius: 3px;
+    border: none;
+	float: left;
+    margin: -2px 0px 0px 15px;
+}
+
+input[type='file'] {
+    margin-bottom: 10px;
+} */
+
+.inputFormConfigRadio {
+    -webkit-appearance: none;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 3px;
+    /*-webkit-transition: border 500ms;*/
+    background: #ffffff;
+    border-radius: 100%;
+    border: 2px solid #24B24B !important;
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    top: 2px;
+}
+
+.inputFormConfigRadio:disabled {
+    opacity: .75;
+}
+
+.inputFormConfigRadio:not(:disabled):not(:active):hover {
+    background: #ffffff;
+}
+
+.inputFormConfigRadio:not(:disabled):active {
+    background: #ffffff;
+    border: 1px solid #24B24B;
+}
+
+.inputFormConfigRadio:checked::before {
+    -webkit-margin-start: center;
+    background: #24B24B !important;
+    border-radius: 10px;
+    content: '';
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    height: 8px !important;
+    left: -2px;
+    margin-top: 4px;
+    opacity: 1;
+    position: absolute;
+    top: -2px;
+    vertical-align: top;
+    width: 8px !important;
+}
+
+html[dir='rtl'] .inputFormConfigRadio:checked::before {
+    right: 0;
+}
+
+.inputFormConfigRadio:active:checked::before {
+    background: #20a553;
+}
+
+.alerta {
+    padding: 10px;
+    background-color: #FFFFBF;
+    border: 1px solid #c6b149;
+    position: relative;
+    border-radius: 3px;
+    color: #c6b149;
+    margin: 5px auto 20px 0px !important;
+    width: 98%;
+}
+
+.alerta h3 {
+    color: #c6b149;
+    padding: 0px;
+    margin: 0px 0px 8px 0px;
+}
+
+.sucesso {
+    padding: 10px;
+    background-color: #c1d8aa;
+    border: 1px solid #017804;
+    position: relative;
+    border-radius: 3px;
+    color: #017804;
+    margin: 5px auto 20px 0px !important;
+    width: 98%;
+}
+
+.sucesso h3 {
+    color: #017804;
+    padding: 0px;
+    margin: 0px 0px 8px 0px;
+}
+
+.erro {
+    padding: 10px;
+    background-color: #FFC2B7;
+    border: 1px solid #f00;
+    position: relative;
+    border-radius: 3px;
+    color: #f00;
+    margin: 5px auto 20px 0px !important;
+    width: 98%;
+}
+
+.erro h3 {
+    color: #f00;
+    padding: 0px;
+    margin: 0px 0px 8px 0px;
+}
+
+.input_verde {
+    background-color: #224527 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.botao {
+    padding: auto;
+    cursor: pointer;
+    box-shadow: none;
+	float: left;
+    margin-top: 25px;
+    text-align: center;
+}
+#links{
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.input_vermelho {
+    background-color: #f00 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.float_right {
+    float: right !important;
+    margin-left: 5px;
+}
+
+/*Estilização do checkbox*/
+
+.inputCheck{
+    width: 18px !important;
+    height: 18px !important;
+    border: solid 1px #999999 !important;
+    border-radius: 3px !important;
+    box-sizing: border-box !important;
+}
+
+.inputCheckTitulo{
+    width: 18px !important;
+    height: 18px !important;
+    border: solid 1px #999999 !important;
+    border-radius: 3px !important;
+    box-sizing: border-box !important;
+}
+
+.inputCheckVerde{
+    display: none !important;
+    position: absolute !important;
+}
+
+.inputCheckVerde:checked + .labelCheckVerde::after{
+  background-image: url('../images/check.jpg') !important;
+  background-size: cover !important;
+}
+
+.labelCheckVerde::before{
+    content: "" !important;
+    display: inline-block !important;
+    width: 18px !important;
+    height: 18px !important;
+    border: solid 1px #999999 !important;
+    border-radius: 3px !important;
+    box-sizing: border-box !important;
+    position: absolute !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+.labelCheckVerde::after{
+    content: "" !important;
+    display: inline-block !important;
+    width: 18px !important;
+    height: 18px !important;
+    border: none !important;
+    box-sizing: border-box !important;
+    position: absolute !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+.labelCheckVerde{
+    position: relative !important;
+}
+
+
+@media ( max-width: 900px ) {
+    
+    .select_menor {
+        padding: 1px 3px 4px 4px !important;
+        font-size: 0.7rem !important;
+        font-family: Nunito, sans-serif;
+        border-radius: 3px;
+        border: 1px solid #999;
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    .inputFormConfigBox{
+        width: 95%;
+    }
+    .radios{
+        width: 95%;
+    }
+
+}
+    
+
+

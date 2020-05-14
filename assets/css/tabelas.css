@@ -1,0 +1,141 @@
+/*
+    Desenvolvido por TiServeloja, dezembro de 2017
+    Alterado em julho de 2019
+*/
+
+.tabelanova
+{
+    border: none;
+    width: 98%;
+    font-size: .875rem;
+    padding: 5px;
+    font-family: Nunito, sans-serif;    
+}
+
+    .tabelanova a, .tabelanova a:hover, .tabelanova a:visited
+    {
+        text-decoration: none;
+    }
+
+    .tabelanova thead
+    {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #404040 !important;
+        padding: 10px 0px 10px 0px;
+        font-family: Nunito, sans-serif;
+    }
+
+    .tabelanova td
+    {
+        border-bottom: 1px dashed;
+        border-color: #a2a2a2;
+    }
+
+    .tabelanova .celulathead
+    {
+        padding: 10px 0px 10px 10px;
+    }
+
+    .tabelanova .celulacheck
+    {
+        padding: 0px;
+        margin: auto;
+        width: 5%;
+    }
+
+    .tabelanova .celulabandeiras
+    {
+        width: 75%;
+        padding: 10px 0px 10px 10px;
+    }
+
+    .nomeBandeira{
+        padding-top: 10px;
+        position: absolute;
+    }
+
+    .tabelanova .celulaselect
+    {
+        padding: 0px;
+        width: 20%;
+    }
+
+
+    .tabelanova .separabotao
+    {
+        margin-right: 20px;
+    }
+
+    .tabelanova .botaoExclusao
+    {
+        cursor: pointer;
+    }
+
+    .tabelanova .celulatotal
+    {
+        padding: 15px 0px 15px 10px;
+        border-top: 1px solid rgba(255, 0, 0, 1);
+        border-bottom: 1px solid rgba(255, 0, 0, 1);
+        background-color: rgba(255, 0, 0, 0.2);
+        color: rgba(255, 0, 0, 1);
+        font-weight: bold;
+    }
+
+    .tabelanova .negrito
+    {
+        font-weight: bold;
+    }
+
+    .tabelanova .celulausuario
+    {
+        height: 40px;
+    }
+
+    .tabelanova .alinhamento
+    {
+        vertical-align: top;
+    }
+
+    .tabelanova .botao
+    {
+        margin-right: 5px;
+        width: 30px !important;
+    }
+
+    .tabelanova .separabotaomenor
+    {
+        margin-right: 10px;
+    }
+
+    .tabelanova .celulacentralizar
+    {
+        text-align: center;
+    }
+
+    .tabelanova .paddingleft
+    {
+        padding-left: 5px;
+    }
+
+    .tabelanova .nopaddingleft
+    {
+        background-color: #fff;
+        padding: 10px 10px 10px 0px;
+        border-bottom: 1px solid #b8c9d1;
+    }
+
+    .tabelanova .impar {
+        background-color: #FFFFFF;
+    }
+
+    .tabelanova .fora_do_banco {
+        background-color: #D3D3D3; 
+    }
+
+    .tabelanova .desabilitar {
+        pointer-events:none;
+        outline:none;
+        text-indent:-9999px;
+    }
+

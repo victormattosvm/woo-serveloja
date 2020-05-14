@@ -1,0 +1,292 @@
+/*
+    Desenvolvido por TiServeloja, dezembro de 2017
+    Alterado em julho de 2019
+*/
+
+.conteudo p {
+  margin-bottom: 20px;
+}
+
+.conteudo h1 {
+  font-size: 30px;
+}
+
+.conteudo h2 {
+  font-size: 20px;
+  line-height: 130%;
+  color: #666;
+}
+
+.conteudo h3 {
+  color: #008316;
+}
+
+#headerPlugin {
+	position: relative;
+	padding: 15px 0px 15px 0px;
+	width: 100%;
+	height: 40px;
+	top: 0px;
+    z-index: 1200;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.barraFundo{
+    background-image: url('../images/barra.png') !important;
+    background-size: cover; 
+    background-position: center;
+}
+
+#headerPlugin #logo {
+    float: left;
+    width: 130px;
+    margin-left: 30px; 
+}
+
+#texto {
+    float: right;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-right: 25px; 
+    color: white;
+    font-size: 0.75rem !important;
+    font-family: Nunito, sans-serif !important;
+}
+
+#linkGooglePlay {
+    float: right;
+    margin-right: 45px; 
+}
+
+#linkAppStore {
+    float: right;
+    margin-right: 10px; 
+}
+
+#headerPlugin #logo img {
+    width: 100%;
+}
+
+.clear {
+    display: block;
+    visibility: hidden;
+}
+
+.cartao {
+  background-color: #e6e6e6;
+  border: 1px solid #999;
+  border-radius: 3px;
+  float: left;
+  padding: 10px;
+  width: 30%;
+  margin: 0px 10px 10px 0px;
+}
+
+.cartao .img_cartao {
+  float: left;
+  width: 30%;
+  margin-right: 10px;
+}
+
+.cartao .img_cartao img {
+  width: 100%;
+}
+
+.painel {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+    width: 95%;
+    position: relative;
+}
+
+.botao-ativo {
+    background-color: #008316;
+    color: #fff;
+    position: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 10px 0px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 3px 3px 0px 0px;
+    margin: 10px 5px 0px 5px;
+    float: left;
+}
+
+.botao-inativo {
+    background-color: #ccc;
+    color: #fff;
+    position: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 10px 0px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 3px 3px 0px 0px;
+    margin: 10px 5px 0px 5px;
+    float: left;
+}
+
+/* barra de ferramentas admin */
+.barraFerramentas {
+    position: relative;
+    width: 98%;
+    height: 40px;
+    padding: 0px;
+    margin-left: -28px;
+}
+
+.barraFerramentas .botao {
+    text-align: center !important;
+    border: none;
+    background-color: transparent;
+    margin: 0px;
+}
+
+.links, .links:visited{
+    text-decoration: none;
+    padding: auto;
+    margin: auto;
+    color: #808080;
+    font-weight: normal;
+    font-family: Nunito, sans-serif !important;
+}
+
+.links:focus { 
+    outline: none !important;
+}
+
+.links:active{
+    text-decoration: none;
+    color: #24B24B;
+    font-weight: normal;
+    font-family: Nunito, sans-serif !important;
+}
+
+.links:hover{
+    color: #24B24B;
+    font-family: Nunito, sans-serif !important;
+}
+
+.linkContato{
+    text-decoration: line;
+    color: #24B24B !important;
+    font-weight: normal;
+    font-family: Nunito, sans-serif !important;
+}
+
+.conteudo{
+    width: 96%;
+    margin: auto;
+    padding: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#wpbody-content{
+    margin-left: 0px !important;
+    margin-top: 20px !important;
+}
+
+#botaoSalvar{
+    color: #fff;
+    float: right;
+    font-size: 1rem !important;
+    font-weight: normal !important;
+    width: 150px;
+    height: 48px;
+    border-radius: 30px;
+    background-size: 100% 100%;
+    text-align: center !important;
+    border: none;
+    background-color: #24B24B;
+    margin-right: 20px;
+    padding: 7px 7px 8px 7px;
+    cursor: pointer;
+    box-shadow: none;
+    
+}
+
+.centralizarDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.box {
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: auto;
+}
+
+.cardHome {
+    float: left;
+    width: 25%;
+    height: 165px;
+    text-align: center;
+    margin: 10px 20px 80px 20px;
+    padding: 20px 10px 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+}
+
+.cardHome img {
+    width: 30%;
+}
+
+.cardHome .subtitulo {
+    margin-top: 5px !important;
+    color: #808080;
+    font-family: Nunito, sans-serif;
+    font-size: 0.75rem;
+}
+
+.cardHome h2 {
+    margin: 10px 0px 0px 0px;
+    font-family: Nunito, sans-serif;
+}
+
+.img_tabela {
+    float: left;
+    width: 40px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: none;
+}
+
+
+
+@media ( max-width: 900px ) {
+
+    
+    #linkGooglePlay {
+        display: none;
+    }
+
+    #linkAppStore {
+        display: none;
+    }
+
+    #texto{
+        display: none;
+    }
+
+    
+    .cardHome {
+        float: center;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+
+}
+
