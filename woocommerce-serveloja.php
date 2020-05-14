@@ -35,9 +35,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                     // define o arquivo de desisntalação e executa funções
                     define('WP_UNINSTALL_PLUGIN', plugins_url('uninstall.php', __FILE__));
 
-                    // cria tabelas no banco
-                    register_activation_hook(__FILE__, WC_Serveloja::wcsvl_create_db_table());
-
+                    
                     // link no menu principal do wordpress
                     $this->wcsvl_menu();
                 } else {
@@ -80,34 +78,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 return $methods;
             }
 
-            private static function wcsvl_create_db_table() {
-                global $wpdb;
-                $tabela_aplicacao = $wpdb->prefix . 'aplicacao';
-                $tabela_cartoes = $wpdb->prefix . 'cartoes';
-                $charset_collate = $wpdb->get_charset_collate();
-                $sql = "CREATE TABLE $tabela_aplicacao (
-                    `apl_id` int(11) NOT NULL AUTO_INCREMENT,
-                    `apl_nome` varchar(32) NOT NULL,
-                    `apl_token` varchar(64) NOT NULL,
-                    `apl_op_teste` int(1),
-                    `apl_token_teste` varchar(64),
-                    `apl_token_producao` varchar(64),
-                    `apl_prefixo` varchar(50),
-                    `apl_email` varchar(100),
-                    PRIMARY KEY (`apl_id`)
-                ) $charset_collate;
-                CREATE TABLE $tabela_cartoes (
-                    `car_id` int(11) NOT NULL AUTO_INCREMENT,
-                    `car_cod` varchar(32) NOT NULL,
-                    `car_bandeira` varchar(50) NOT NULL,
-                    `car_parcelas` varchar(20) NOT NULL,
-                    PRIMARY KEY (`car_id`)
-                ) $charset_collate;
-                ";
-                require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-                dbDelta($sql);
-            }
-
+            
             private function wcsvl_menu() {
                 add_action('admin_menu', 'wcsvl_addCustomMenuItem');
                 function wcsvl_addCustomMenuItem() {
@@ -120,17 +91,49 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         }
     }
 
+    function wcsvl_create_db_table() {
+        global $wpdb;
+        $tabela_aplicacao = $wpdb->prefix . 'serveloja_aplicacao';
+        $tabela_cartoes = $wpdb->prefix . 'serveloja_cartoes';
+        $charset_collate = $wpdb->get_charset_collate();
+        $sql = "CREATE TABLE $tabela_aplicacao (
+            `apl_id` int(11) NOT NULL AUTO_INCREMENT,
+            `apl_nome` varchar(32) NOT NULL,
+            `apl_token` varchar(64) NOT NULL,
+            `apl_op_teste` int(1),
+            `apl_token_teste` varchar(64),
+            `apl_token_producao` varchar(64),
+            `apl_prefixo` varchar(50),
+            `apl_email` varchar(100),
+            PRIMARY KEY (`apl_id`)
+        ) $charset_collate;
+        CREATE TABLE $tabela_cartoes (
+            `car_id` int(11) NOT NULL AUTO_INCREMENT,
+            `car_cod` varchar(32) NOT NULL,
+            `car_bandeira` varchar(50) NOT NULL,
+            `car_parcelas` varchar(20) NOT NULL,
+            PRIMARY KEY (`car_id`)
+        ) $charset_collate;
+        ";
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+        dbDelta($sql);
+    }
+
+
     // Em caso de desativação do plugin
     function wcsvl_truncate_db_table() {
         global $wpdb;
-        $tabela_aplicacao = $wpdb->prefix . 'aplicacao';
-        $tabela_cartoes = $wpdb->prefix . 'cartoes';
+        $tabela_aplicacao = $wpdb->prefix . 'serveloja_aplicacao';
+        $tabela_cartoes = $wpdb->prefix . 'serveloja_cartoes';
         $wpdb->query("TRUNCATE TABLE $tabela_aplicacao");
         $wpdb->query("TRUNCATE TABLE $tabela_cartoes");
         delete_option("serveloja");
         delete_site_option('serveloja');
     }
-    register_deactivation_hook(__FILE__, 'wcsvl_truncate_db_table');
 
+    register_activation_hook(__FILE__, 'wcsvl_create_db_table');
+    register_deactivation_hook(__FILE__, 'wcsvl_truncate_db_table');
     add_action('plugins_loaded', array('WC_Serveloja', 'wcsvl_get_instance'));
-} ?>
+    
+// cria tabelas no banco
+}

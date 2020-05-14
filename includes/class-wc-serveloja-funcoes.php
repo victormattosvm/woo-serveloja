@@ -34,7 +34,7 @@ class WC_Serveloja_Funcoes {
     private static function wcsvl_insert_aplicacao($apl_nome, $apl_token_teste, $apl_op_teste, $apl_token_producao, $apl_token, $apl_prefixo, $apl_email) {
         global $wpdb;
         $wpdb->insert(
-            $wpdb->prefix . "aplicacao",
+            $wpdb->prefix . "serveloja_aplicacao",
             array('apl_nome' => $apl_nome,
                     'apl_token_teste' => $apl_token_teste,
                     'apl_op_teste' => $apl_op_teste,
@@ -55,7 +55,7 @@ class WC_Serveloja_Funcoes {
     private static function wcsvl_update_aplicacao($apl_nome, $apl_token_teste, $apl_op_teste, $apl_token_producao, $apl_token, $apl_prefixo, $apl_email, $apl_id) {
         global $wpdb;
         $wpdb->update(
-            $wpdb->prefix . "aplicacao",
+            $wpdb->prefix . "serveloja_aplicacao",
             array('apl_nome' => $apl_nome,
                     'apl_token_teste' => $apl_token_teste,
                     'apl_op_teste' => $apl_op_teste,
@@ -118,7 +118,7 @@ class WC_Serveloja_Funcoes {
     // lista dados da aplicação
     public static function wcsvl_aplicacao() {
         global $wpdb;
-        $rows = $wpdb->get_results("SELECT apl_id, apl_nome, apl_token_teste, apl_op_teste, apl_token_producao, apl_token, apl_prefixo, apl_email FROM " . $wpdb->prefix . "aplicacao ORDER BY apl_id DESC LIMIT 1");
+        $rows = $wpdb->get_results("SELECT apl_id, apl_nome, apl_token_teste, apl_op_teste, apl_token_producao, apl_token, apl_prefixo, apl_email FROM " . $wpdb->prefix . "serveloja_aplicacao ORDER BY apl_id DESC LIMIT 1");
         if ($wpdb->last_error) {
             return WC_Serveloja_Funcoes::wcsvl_div_resposta("erro", "Ocorreram falhas", "Erro: " . $wpdb->last_error);
         } else {
@@ -144,7 +144,7 @@ class WC_Serveloja_Funcoes {
     public static function wcsvl_insert_cartoes($posicao, $car_cod, $car_bandeira, $car_parcelas, $nonce) {
         if (wp_verify_nonce($nonce, 'cartoes_user')) {
             global $wpdb;
-            $wpdb->query("TRUNCATE TABLE " . $wpdb->prefix . "cartoes");
+            $wpdb->query("TRUNCATE TABLE " . $wpdb->prefix . "serveloja_cartoes");
             for ($i = 0; $i < count($posicao); $i++) {
                 $pos = $posicao[$i];
                 $wpdb->insert(
@@ -168,7 +168,7 @@ class WC_Serveloja_Funcoes {
 
     public static function wcsvl_cartoes_salvos() {
         global $wpdb;
-        $rows = $wpdb->get_results("SELECT car_cod, car_bandeira, car_parcelas FROM " . $wpdb->prefix . "cartoes");
+        $rows = $wpdb->get_results("SELECT car_cod, car_bandeira, car_parcelas FROM " . $wpdb->prefix . "serveloja_cartoes");
         if ($wpdb->last_error) {
             return WC_Serveloja_Funcoes::div_resposta("erro", "Ocorreram falhas", "Erro: " . $wpdb->last_error);
         } else {
@@ -184,7 +184,7 @@ class WC_Serveloja_Funcoes {
     // verifica se existem configurações salvas
     public static function wcsvl_configuracoes() {
         global $wpdb;
-        $rows = $wpdb->get_results("SELECT COUNT(apl_id) AS total FROM " . $wpdb->prefix . "aplicacao");
+        $rows = $wpdb->get_results("SELECT COUNT(apl_id) AS total FROM " . $wpdb->prefix . "serveloja_aplicacao");
         if ($wpdb->last_error) {
             return WC_Serveloja_Funcoes::div_resposta("erro", "Ocorreram falhas", "Erro: " . $wpdb->last_error);
         } else {

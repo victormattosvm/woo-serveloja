@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 class WC_Serveloja_Styles {
 
     // admin
-    public function wcsvl_styles_serveloja_admin() {
+    public static function wcsvl_styles_serveloja_admin() {
         wp_enqueue_style('wcsvl_serveloja', plugins_url('assets/css/serveloja.css', dirname(__FILE__)));
         wp_enqueue_style('wcsvl_form', plugins_url('assets/css/forms.css', dirname(__FILE__)));
         wp_enqueue_style('wcsvl_tabelas', plugins_url('assets/css/tabelas.css', dirname(__FILE__)));
@@ -24,7 +24,7 @@ class WC_Serveloja_Styles {
     }
 
     // tema
-    public function wcsvl_styles_serveloja_gateway() {
+    public static function wcsvl_styles_serveloja_gateway() {
         wp_enqueue_style('wcsvl_cliente', plugins_url('assets/css/cliente.css', dirname(__FILE__)));
         wp_enqueue_style('wcsvl_form', plugins_url('assets/css/forms.css', dirname(__FILE__)));
         wp_enqueue_script('wcsvl_masked', plugins_url('assets/scripts/maskedinput.js', dirname(__FILE__)));
